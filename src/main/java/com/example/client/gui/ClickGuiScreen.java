@@ -12,6 +12,8 @@ public class ClickGuiScreen extends Screen {
 
     @Override
     public void render(DrawContext context, int mouseX, int mouseY, float delta) {
+        super.render(context, mouseX, mouseY, delta);
+        
         context.fill(0, 0, this.width, this.height, 0x70000000);
 
         int panelX = 50, panelY = 40, panelW = 320, panelH = 220;
@@ -24,8 +26,6 @@ public class ClickGuiScreen extends Screen {
         renderModuleCard(context, panelX + 15, panelY + 40, "Legit Killaura", "Randomized Delay & Smooth Aim", mouseX, mouseY);
         renderModuleCard(context, panelX + 15, panelY + 90, "ESP / Tracers", "Glow & Line Render", mouseX, mouseY);
         renderModuleCard(context, panelX + 15, panelY + 140, "Fullbright", "Max Brightness / Night Vision", mouseX, mouseY);
-
-        super.render(context, mouseX, mouseY, delta);
     }
 
     private void renderModuleCard(DrawContext context, int x, int y, String title, String desc, int mouseX, int mouseY) {
